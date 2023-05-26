@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Miss me? - The Game</title>
+  </head>
+  <body>
+    <div id="gameOver">
+      <h1>Game Over</h1>
+      <p>Refresh Page to replay</p>
+    </div>
+
+    <div class="header">
+      <div class="playerInfo">
+        <p id="showPlayerData"></p>
+      </div>
+      <div class="playerData">
+        <h4>Enter player name and click Start to Continue</h4>
+        <input type="text" id="pName" placeholder="Enter player name" />
+        <button id="start">Start</button>
+      </div>
+      <div class="scoreBox">
+        <h2>Coin : <span id="score">0</span></h2>
+      </div>
+    </div>
+
+    <div class="gameContainer">
+      <div class="player"><img id="pl" src="plStand.png" alt="" /></div>
+      <div class="obstacle"><img src="stone.png" id="ob" alt="" /></div>
+    </div>
+    <div class="footer">
+      <p>©️ Ravi Kant Jha</p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

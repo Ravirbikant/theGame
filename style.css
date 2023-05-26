@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
+}
+
+body {
+  background-image: url(backgroundImage.jpg);
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+}
+
+#gameOver {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1% 5%;
+  margin-left: 30vw;
+  margin-top: 20vh;
+  position: absolute;
+  background-color: burlywood;
+  width: 30vw;
+  height: 10vh;
+}
+
+.header {
+  display: flex;
+}
+
+.playerInfo,
+.scoreBox {
+  height: 8vh;
+  width: 33%;
+  padding-top: 3%;
+  text-align: center;
+}
+
+.playerData {
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 33%;
+}
+
+.playerData input {
+  margin-top: 2%;
+  padding: 1% 2%;
+}
+
+.playerData button {
+  margin-top: 1%;
+  width: fit-content;
+  padding: 1% 5%;
+}
+
+.gameContainer {
+  margin-top: 5%;
+  position: relative;
+  width: 100%;
+  height: 65vh;
+}
+
+#playerData {
+  visibility: hidden;
+}
+
+.player {
+  width: 50px;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 5vw;
+}
+
+.gameOverAnimation {
+  animation: gameOverAnimation 3s linear;
+}
+
+.playerUpAnimation {
+  animation: playerUpAnimation 0.9s linear;
+}
+
+.playerDownAnimation {
+  animation: playerDownAnimation 0.9s linear;
+}
+
+#pl,
+#ob {
+  height: 100%;
+  width: 100%;
+}
+
+.obstacle {
+  width: 100px;
+  height: 70px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.obstacleAnimation {
+  animation: obstacleAnimation 1.2s linear infinite;
+}
+
+.footer {
+  display: flex;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(79, 11, 11),
+    rgb(58, 15, 15)
+  );
+  height: 8vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer button {
+  margin-top: 2px;
+  width: fit-content;
+  padding: 5px 2px;
+}
+
+@keyframes playerUpAnimation {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 150px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes gameOverAnimation {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 0;
+  }
+  75% {
+    bottom: 40px;
+  }
+  100% {
+    bottom: -100px;
+  }
+}
+
+@keyframes playerDownAnimation {
+  0% {
+    height: 50px;
+  }
+  50% {
+    height: 40px;
+  }
+  100% {
+    height: 50px;
+  }
+}
+
+@keyframes obstacleAnimation {
+  0% {
+    right: -50px;
+  }
+  100% {
+    right: 100vw;
+  }
+}
